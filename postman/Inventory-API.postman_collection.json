@@ -1,0 +1,127 @@
+{
+  "info": {
+    "name": "Inventory Details API",
+    "description": "Postman collection for testing the Inventory Details API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Get Inventory Details - 2026",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/inventory/details?fromDate=2026-01-01&toDate=2026-12-31",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "inventory",
+            "details"
+          ],
+          "query": [
+            {
+              "key": "fromDate",
+              "value": "2026-01-01"
+            },
+            {
+              "key": "toDate",
+              "value": "2026-12-31"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Inventory Details - April to May 2026",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/inventory/details?fromDate=2026-04-01&toDate=2026-05-31",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "inventory",
+            "details"
+          ],
+          "query": [
+            {
+              "key": "fromDate",
+              "value": "2026-04-01"
+            },
+            {
+              "key": "toDate",
+              "value": "2026-05-31"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Inventory Details - No Records",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/inventory/details?fromDate=2025-01-01&toDate=2025-12-31",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "inventory",
+            "details"
+          ],
+          "query": [
+            {
+              "key": "fromDate",
+              "value": "2025-01-01"
+            },
+            {
+              "key": "toDate",
+              "value": "2025-12-31"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Invalid Date Range",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/inventory/details?fromDate=2026-12-31&toDate=2026-01-01",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "inventory",
+            "details"
+          ],
+          "query": [
+            {
+              "key": "fromDate",
+              "value": "2026-12-31"
+            },
+            {
+              "key": "toDate",
+              "value": "2026-01-01"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
